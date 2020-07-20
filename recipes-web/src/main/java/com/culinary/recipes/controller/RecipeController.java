@@ -17,6 +17,11 @@ public class RecipeController {
         this.recipeService = recipeService;
     }
 
+    @GetMapping(value = "/")
+    public String get() {
+        return "index";
+    }
+
     @GetMapping(value = "/recipes")
     public String getRecipes(Model model) {
         model.addAttribute("recipes", recipeService.getAll());
