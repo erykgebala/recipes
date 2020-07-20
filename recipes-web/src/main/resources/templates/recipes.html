@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipes</title>
+    <base href="/" />
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/recipes.css}"/>
+</head>
+<body>
+    <div class="container">
+        <h2 th:text="#{welcome}"/>
+        <div class="card mb-2" style="width: 48rem;" th:each="recipe : ${recipes}">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${recipe.title}"/>
+                <p class="card-text" th:text="${recipe.note}"/>
+                <a th:href="@{/api/recipes/__${recipe.id}__}" class="btn btn-primary">Szczegoly</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</body>
+</html>
