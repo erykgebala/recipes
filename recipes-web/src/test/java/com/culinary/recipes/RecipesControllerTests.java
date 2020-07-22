@@ -1,5 +1,6 @@
 package com.culinary.recipes;
 
+import com.culinary.recipes.controller.RecipeController;
 import com.culinary.recipes.dto.RecipeDto;
 import com.culinary.recipes.service.RecipeService;
 import com.culinary.recipes.service.UserService;
@@ -22,7 +23,7 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @AutoConfigureMockMvc
-@WebMvcTest
+@WebMvcTest(controllers  = RecipeController.class)
 class RecipesControllerTests {
 
     @Autowired
