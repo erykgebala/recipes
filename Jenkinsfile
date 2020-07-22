@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Run Maven on a Unix agent.
-                sh "mvn heroku deploy"
+                sh "mvn heroku:deploy"
             }
         }
     }
