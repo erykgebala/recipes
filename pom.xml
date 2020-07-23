@@ -80,7 +80,7 @@
                 <configuration>
                     <appName>eg-recipes-test</appName>
                     <processTypes>
-                        <web>java -jar recipes-web/target/recipes-web-${project.version}.jar</web>
+                        <web>java -jar -Dserver.port=$PORT recipes-web/target/recipes-web-${project.version}.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
