@@ -84,7 +84,7 @@
                     </processTypes>
                     <includeTarget>false</includeTarget>
                     <includes>
-                        <include>${basedir}/recipes-web-${project.version}.jar</include>
+                        <include>recipes-web/target/recipes-web-${project.version}.jar</include>
                     </includes>
                 </configuration>
             </plugin>
