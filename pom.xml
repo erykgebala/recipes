@@ -5,8 +5,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>recipes-data</module>
-        <module>recipes-web</module>
         <module>recipes-service</module>
+        <module>recipes-web</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -80,7 +80,7 @@
                 <configuration>
                     <appName>eg-recipes-test</appName>
                     <processTypes>
-                        <web>java -jar -Dserver.port=8080 /recipes-web/target/recipes-web-${project.version}.jar</web>
+                        <web>java -jar recipes-web/target/recipes-web-${project.version}.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
